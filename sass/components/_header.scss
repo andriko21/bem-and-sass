@@ -1,0 +1,113 @@
+/*шапка*/
+header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+}
+.container-header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.container-header__list {
+  display: flex;
+}
+
+.container-header__list .item {
+  margin-right: 50px;
+}
+
+.container-header__list .item:last-child {
+  margin-right: 0;
+}
+
+.container-header__list .item:first-child {
+  margin-left: 93px;
+}
+
+.container-header__list .container-header__links {
+  display: block;
+
+  position: relative;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: $title-text-color;
+
+  transition: color $time-transition $function-bezier;
+}
+
+.container-header__links.current,
+.container-header__links:hover,
+.container-header__links:focus {
+  color: $acent-color;
+}
+
+.item .container-header__links::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background: $acent-color;
+  border-radius: 2px;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform $time-transition $function-bezier,
+    opacity $time-transition $function-bezier;
+}
+.item .container-header__links.current::after,
+.item .container-header__links:hover::after,
+.item .container-header__links:focus::after {
+  transform: scaleX(1);
+
+  background: $acent-color;
+  opacity: 1;
+}
+
+.auth-nav__contacts {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #757575;
+  font-style: normal;
+  transition: color $time-transition $function-bezier;
+}
+
+.auth-nav__contacts:hover,
+.auth-nav__contacts:focus {
+  color: $acent-color;
+}
+
+.auth-nav__icons {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.auth-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  margin-left: auto;
+}
+.auth-nav .item {
+  margin-left: 250px;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}

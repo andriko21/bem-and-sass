@@ -1,0 +1,38 @@
+body {
+  font-family: "Roboto";
+  color: $title-text-color;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1172px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.visualy-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

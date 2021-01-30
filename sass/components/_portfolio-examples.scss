@@ -1,0 +1,96 @@
+.examples__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1172px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid transparent;
+}
+.examples__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.examples__list .item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+
+.examples__list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.examples__card-portfolio {
+  display: block;
+  box-shadow: none;
+  transition: box-shadow $time-transition $function-bezier;
+}
+
+.examples__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.examples__image {
+  border: 0;
+  display: block;
+}
+
+.examples__overlay-portfolio {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $acent-color;
+  box-shadow: none;
+
+  transform: translateY(100%);
+  transition: transform $time-transition $function-bezier;
+}
+
+.examples__exposition {
+  padding: 63px 24px;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $primary-white-color;
+}
+
+.examples__card-portfolio:hover .examples__overlay-portfolio,
+.examples__card-portfolio:focus .examples__overlay-portfolio {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.examples__card-portfolio:hover,
+.examples__card-portfolio:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: transparent;
+}
+
+.examples__card {
+  padding-bottom: 20px;
+  border: 1px solid #eeeeee;
+  padding-top: 20px;
+  padding-left: 24px;
+}
+
+.examples__projects-names {
+  font-size: 18px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $title-text-color;
+  margin-bottom: 4px;
+}
+
+.examples__types-work {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: $paragraph-color;
+}

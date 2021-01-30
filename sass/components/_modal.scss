@@ -1,0 +1,239 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity $time-transition $function-bezier;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $time-transition $function-bezier;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background: $primary-white-color;
+
+  transition: fill $time-transition $function-bezier;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: $acent-color;
+}
+.modal-form {
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.modal-form-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fild {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.form-fild:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 35px;
+
+  border-color: rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 4px;
+  transition: border-color $time-transition $function-bezier;
+}
+
+.input:focus,
+.input:hover {
+  border-color: $acent-color;
+  outline: none;
+}
+
+.input:focus ~ svg,
+.input:hover ~ svg {
+  fill: $acent-color;
+}
+
+.textarea:focus,
+.textarea:hover {
+  border-color: $acent-color;
+}
+
+.form-fild svg {
+  transition: fill $time-transition $function-bezier;
+}
+
+.form-fild label {
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.textarea {
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  transition: border-color $time-transition $function-bezier;
+}
+
+.form-fild ::placeholder {
+  padding: 16px 12px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-fild svg {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateX(50%);
+}
+
+.form-checkbox {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.71;
+
+  align-items: center;
+  justify-content: center;
+
+  letter-spacing: 0.03em;
+
+  color: $paragraph-color;
+}
+
+.conditions {
+  color: $acent-color;
+  text-decoration: underline;
+}
+.button-modal {
+  margin-right: auto;
+  margin-left: auto;
+
+  margin-top: 30px;
+
+  width: 200px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  color: $primary-white-color;
+  background: $acent-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  border: #ffffff;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
+
+  transition: all $time-transition $function-bezier;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-origin: border-box;
+  background-size: contain;
+  background-color: $acent-color;
+  border: 2px solid $acent-color;
+  background-image: url(../images/iconCheck.svg);
+}
