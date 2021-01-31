@@ -47,10 +47,10 @@
 
   transition: fill $time-transition $function-bezier,
     border-color $time-transition $function-bezier;
-}
 
-.clients__link:hover,
-.clients__link:focus {
-  border: 1px solid $acent-color;
-  fill: $acent-color;
+  &:hover,
+  &:focus {
+    border: 1px solid $acent-color;
+    fill: $acent-color;
+  }
 }

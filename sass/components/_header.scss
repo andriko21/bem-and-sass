@@ -43,15 +43,15 @@ header {
   color: $title-text-color;
 
   transition: color $time-transition $function-bezier;
+
+  &.current,
+  &:hover,
+  &:focus {
+    color: $acent-color;
+  }
 }
 
-.container-header__links.current,
-.container-header__links:hover,
-.container-header__links:focus {
-  color: $acent-color;
-}
-
-.item .container-header__links::after {
+.container-header__links::after {
   content: "";
   position: absolute;
 
@@ -69,9 +69,10 @@ header {
   transition: transform $time-transition $function-bezier,
     opacity $time-transition $function-bezier;
 }
-.item .container-header__links.current::after,
-.item .container-header__links:hover::after,
-.item .container-header__links:focus::after {
+
+.container-header__links.current::after,
+.container-header__links:hover::after,
+.container-header__links:focus::after {
   transform: scaleX(1);
 
   background: $acent-color;
@@ -85,11 +86,11 @@ header {
   color: #757575;
   font-style: normal;
   transition: color $time-transition $function-bezier;
-}
 
-.auth-nav__contacts:hover,
-.auth-nav__contacts:focus {
-  color: $acent-color;
+  &:hover,
+  &:focus {
+    color: $acent-color;
+  }
 }
 
 .auth-nav__icons {

@@ -91,12 +91,12 @@ footer {
 
   transition: background-color $time-transition $function-bezier,
     box-shadow $time-transition $function-bezier;
-}
 
-.footer__social-links:hover,
-.footer__social-links:focus {
-  color: $primary-white-color;
-  background-color: $acent-color;
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $acent-color;
+  }
 }
 
 .footer__icons {

@@ -33,14 +33,14 @@
   transition: color $time-transition $function-bezier,
     background-color $time-transition $function-bezier,
     box-shadow $time-transition $function-bezier;
-}
 
-.galery__portfolio-buttons:hover,
-.galery__portfolio-buttons:focus,
-.galery__portfolio-buttons:active {
-  background-color: $acent-color;
-  color: $primary-white-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $acent-color;
+    color: $primary-white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border: transparent;
+  }
 }
